@@ -8,6 +8,11 @@ export const useModalOpen = () => {
 
     const toggleModal = () =>{
         setOpenModal(!openModal)
+        if(!openModal){
+            document.querySelector('html').style.overflow='hidden'
+        }else{
+            document.querySelector('html').style.overflow=''
+        }('overflow', '')
     }
 
 

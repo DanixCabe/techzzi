@@ -4,16 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useMenuOpen } from '../hooks/useMenuOpen';
 import { Modal } from './Modal';
 import { useDarkMode, useModalOpen } from '../hooks';
-import { useForm } from '../../auth/hooks';
 import { startGoogleSignIn, startLogout } from '../../store/auth';
 import { FiLogOut } from "react-icons/fi";
 import { BsFillSunFill, BsFillMoonStarsFill, BsCart } from "react-icons/bs";
 import { Profile } from './Profile';
 
-const formData = {
-    email: '',
-    password: '',
-}
 
 const theme = localStorage.getItem('theme');
 
@@ -23,11 +18,11 @@ export const Navbar = () => {
     const dispatch = useDispatch();
     const {status, displayName} = useSelector(state => state.auth);
     
-    const {email, password, formState, onInputChange} = useForm(formData);
+
     const {changeMobMenu, toggleMenu, openSetting, toggleSettings} = useMenuOpen();
     const {openModal, setOpenModal, toggleModal} = useModalOpen();
     const { darkMode, toggleDarkLightMode } = useDarkMode(theme);
-
+ 
 
     useEffect(() => {
         toggleDarkLightMode(theme)
@@ -39,6 +34,8 @@ export const Navbar = () => {
     }
 
     const onLogout = () =>{
+        setOpenModal(false)
+        toggleSettings(false)
         dispatch(startLogout());
     }
 
@@ -178,7 +175,7 @@ export const Navbar = () => {
             }
             
             {
-                (openModal && status === 'not-authenticated') && (<Modal toggleSettings={toggleModal} onInputChange={onInputChange} email={email} password={password} onGoogleSingIn={onGoogleSingIn}/>)
+                (openModal && status === 'not-authenticated' || openModal && status === 'checking') && (<Modal toggleSettings={toggleModal} onGoogleSingIn={onGoogleSingIn}/>)
             }
               
         </nav>
