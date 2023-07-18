@@ -8,10 +8,9 @@ export const TechzziRoutes = () => {
     return (
         <>
             <Navbar />
-            <div className="container min-h-full justify-center mx-auto h-[1920px] px-8">
-                <Outlet />
-            </div>
-            
+            <Outlet />
+
+
         </>
     )
 }

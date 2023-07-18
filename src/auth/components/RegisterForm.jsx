@@ -45,7 +45,7 @@ export const RegisterForm = ({isAuthenticated}) => {
                     value={displayName}
                     type="text" 
                     name="displayName" 
-                    className={`mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 ${!!displayNameValid && formSubmitted ? `ring-red-500 focus:ring-red-500 focus:border-red-500` : ``}`}
+                    className={`mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 ${!!displayNameValid && formSubmitted ? `ring-red-500 border-red-500 placeholder:text-red-500 focus:ring-red-500 focus:border-red-500` : ``}`}
                     placeholder="Full name" />
                     {
                         (!!displayNameValid && formSubmitted) && <span className='mt-1 text-red-400 text-sm'>{displayNameValid}</span>
@@ -60,7 +60,7 @@ export const RegisterForm = ({isAuthenticated}) => {
                     value={email}
                     type="email" 
                     name="email" 
-                    className={`mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 ${!!emailValid && formSubmitted ? `ring-red-500 focus:ring-red-500 focus:border-red-500` : ``}`} 
+                    className={`mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 ${!!emailValid && formSubmitted ? `ring-red-500 border-red-500 placeholder:text-red-500 focus:ring-red-500 focus:border-red-500` : ``}`} 
                     placeholder="you@example.com" />
                     {
                         (!!emailValid && formSubmitted) && <span className='mt-1 text-red-400 text-sm'>{emailValid}</span>
@@ -75,7 +75,7 @@ export const RegisterForm = ({isAuthenticated}) => {
                     value={password}
                     type="password" 
                     name="password" 
-                    className={`mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 ${!!passwordValid && formSubmitted ? `ring-red-500 focus:ring-red-500 focus:border-red-500` : ``}`} 
+                    className={`mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 ${!!passwordValid && formSubmitted ? `ring-red-500 border-red-500 placeholder:text-red-500 focus:ring-red-500 focus:border-red-500` : ``}`} 
                     placeholder="*********"/>
                     {
                         (!!passwordValid && formSubmitted) && <span className='mt-1 text-red-400 text-sm'>{passwordValid}</span>

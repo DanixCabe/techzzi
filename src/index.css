@@ -13,3 +13,30 @@ html.dark{
 div#mobile-menu{
     transition: all ease-in-out 1s;
 }
+.swiper{
+    overflow: inherit;
+}
+
+.swiper .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+        
+.swiper .swiper-pagination-bullet {
+    background: #D7D7D7;
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+    border: 10px;
+    border-top: 0;
+    border-bottom: 0;
+    opacity: 1;
+    margin: 0px 5px;
+}
+.swiper .swiper-pagination-bullet-active {
+    background: #002EFF;
+    border-radius: 12px;
+    width: 32px;
+    opacity: 1;
+}

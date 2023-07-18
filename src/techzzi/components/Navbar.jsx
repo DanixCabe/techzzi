@@ -44,8 +44,8 @@ export const Navbar = () => {
     }
 
     return (
-        <nav className="sticky top-0 bg-gray-100  dark:bg-slate-900 dark:border-b dark:border-slate-50/[0.06]">
-            <div className="md:container 2xl:max-w-[1440px] 3xl:max-w-[1920px]  xs:mx-auto px-2 sm:px-6 lg:px-8">
+        <nav className="sticky z-50 top-0 bg-gray-100  dark:bg-slate-900 dark:border-b dark:border-slate-50/[0.06]">
+            <div className="md:container 2xl:max-w-[1530px] 3xl:max-w-[1920px]  xs:mx-auto px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="inset-y-0 left-0 flex items-center lg:hidden">
                         <button onClick={toggleMenu} type="button" className="inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:bg-gray-200 hover:text-gray-800 dark:hover:bg-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-400" aria-controls="mobile-menu" aria-expanded="false">
@@ -138,19 +138,19 @@ export const Navbar = () => {
                     <div  className="lg:hidden active:visible transition duration-700" id="mobile-menu">
                         <div className="space-y-2 px-2 pb-3 pt-2 flex flex-col text-gray-600 hover:text-gray-800 dark:text-gray-200  text text-sm font-medium ">
                             <NavLink  
-                                className={({isActive}) => ` hover:bg-gray-200 dark:hover:text-white  dark:hover:bg-slate-800 rounded-md px-3 py-2  ${isActive ? `active bg-gray-900 text-white` : ``}` }
+                                className={({isActive}) => `hover:bg-gray-200 rounded-md px-3 py-2 dark:hover:bg-slate-800  ${isActive ? `active bg-gray-900 text-gray-100` : ``}` }
                                 to="/marvel">
-                                Marvel Heroes
+                                Hardware
                             </NavLink>
                             <NavLink  
-                                className={({isActive}) => ` hover:bg-gray-200 dark:hover:text-white dark:hover:bg-slate-800  rounded-md px-3 py-2  ${isActive ? `active bg-gray-900 text-white` : ``}` }
+                                className={({isActive}) => `hover:bg-gray-200 rounded-md px-3 py-2 dark:hover:bg-slate-800 ${isActive ? `active bg-gray-900 text-gray-100` : ``}` }
                                 to="/dc">
-                                DC Heroes
+                                Computer Peripherals
                             </NavLink>
                             <NavLink  
-                                className={({isActive}) => ` hover:bg-gray-200 dark:hover:text-white dark:hover:bg-slate-800  rounded-md px-3 py-2 ${isActive ? `active bg-gray-900 text-white` : ``}` }
+                                className={({isActive}) => `hover:bg-gray-200 rounded-md px-3 py-2 dark:hover:bg-slate-800  ${isActive ? `active bg-gray-900 text-gray-100` : ``}` }
                                 to="/search">
-                                Search Heroes
+                                Technology
                             </NavLink>
                         
                             <div className={`flex md:hidden relative ml-auto w-fit items-center text-lg rounded-3xl ring-2  ${(darkMode === 'dark') ? `bg-gray-700 text-white ring-gray-700 `:`bg-cyan-500 ring-cyan-500  text-white`}`} >
