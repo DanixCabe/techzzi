@@ -1,0 +1,41 @@
+div.swiper-products{
+    margin-top: 48px;
+
+    &__swiper-slide-products{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-button-prev{
+        display: none;
+        @media (min-width: 1023px) {
+            display: flex;
+        }
+    }
+
+    .swiper-button-next{
+        display: none;
+        @media (min-width: 1023px) {
+            display: flex;
+        }
+    }
+
+    &__slider-items{
+        width: auto;
+        height: auto;
+        border: 1px solid;
+        max-width: 200px;
+        @media (min-width: 360px) {
+            max-width: 244px;
+        }
+        @media (min-width: 1200px) {
+            max-width: 270px;
+        }
+        @media (min-width: 1439px) {
+            max-width: 400px;
+        }
+    }
+
+}
+

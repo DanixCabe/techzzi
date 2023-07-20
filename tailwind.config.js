@@ -16,7 +16,7 @@ export default {
             'md': {'min': '767px'},
             'sm': {'min': '560px'},
             'xs': {'min': '360px'},
-            'xxs': {'min': '1px', max: '359px'},
+            'xxs': {'min': '1px'},
           }
     },
     plugins: [],

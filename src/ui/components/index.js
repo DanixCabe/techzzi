@@ -1,1 +1,2 @@
-export * from './SwiperSlideHome'
+export * from './SwiperHome';
+export * from './SwiperProducts';
