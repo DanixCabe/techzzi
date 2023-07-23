@@ -1,2 +1,3 @@
-export * from './SwiperHome';
-export * from './SwiperProducts';
+export * from './Modal';
+export * from './Navbar';
+export * from './Profile';

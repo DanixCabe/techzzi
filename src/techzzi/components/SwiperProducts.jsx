@@ -7,7 +7,6 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import {EffectCoverflow, Pagination, Navigation  } from 'swiper/modules'
 
-
 export const SwiperProducts = () => {
     return (
         <Swiper
@@ -123,7 +122,8 @@ export const SwiperProducts = () => {
                         </div>
                     </div>
                 </a>
-            </SwiperSlide>   
+            </SwiperSlide>
+
 
             
             <SwiperSlide className="swiper-products__swiper-slide-products">
@@ -153,8 +153,8 @@ export const SwiperProducts = () => {
                     })
                 } */}
                 <div className='slider-controler h-auto'>
-                    <div className='swiper-button-next'></div>
-                    <div className='swiper-button-prev'></div>
+                    <div className='swiper-button-next'></div>   
+                    <div className='swiper-button-prev'></div>   
                     <div className='swiper-pagination'></div>
                 </div>
         </Swiper>

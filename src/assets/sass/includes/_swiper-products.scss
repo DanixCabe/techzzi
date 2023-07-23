@@ -1,5 +1,6 @@
 div.swiper-products{
     margin-top: 48px;
+    overflow-clip-margin: 26px;
 
     &__swiper-slide-products{
         display: flex;
@@ -11,6 +12,10 @@ div.swiper-products{
         display: none;
         @media (min-width: 1023px) {
             display: flex;
+            width: 42px;
+            left: -20px;
+            content: url('/src/assets/images/arrow-carousel.png');
+            content: url('/src/assets/images/arrow-carousel.svg');
         }
     }
 
@@ -18,6 +23,11 @@ div.swiper-products{
         display: none;
         @media (min-width: 1023px) {
             display: flex;
+            width: 42px;
+            right: -20px;
+            content: url('/src/assets/images/arrow-carousel.png');
+            content: url('/src/assets/images/arrow-carousel.svg');
+            transform: rotate(180deg);
         }
     }
 

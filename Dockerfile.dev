@@ -1,0 +1,9 @@
+FROM node
+
+WORKDIR /home/app
+
+COPY . .
+
+EXPOSE 5173
+
+CMD ["yarn", "dev"]

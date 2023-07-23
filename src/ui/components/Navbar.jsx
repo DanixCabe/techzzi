@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useMenuOpen } from '../hooks/useMenuOpen';
+import { useMenuOpen } from '../../techzzi/hooks/useMenuOpen';
 import { Modal } from './Modal';
-import { useDarkMode, useModalOpen } from '../hooks';
+import { useDarkMode, useModalOpen } from '../../techzzi/hooks';
 import { startGoogleSignIn, startLogout } from '../../store/auth';
 import { FiLogOut } from "react-icons/fi";
 import { BsFillSunFill, BsFillMoonStarsFill, BsCart } from "react-icons/bs";
