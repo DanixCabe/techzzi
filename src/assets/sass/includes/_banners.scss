@@ -1,0 +1,40 @@
+
+.banner-keyboard{
+    height: 250px;
+    width: 100%;
+    background-image: url('/src/assets/images/banner/banner-keyboard-g915.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30% center;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @media (min-width: 1023px) {
+        padding: 16px 48px;
+    }
+    @media (min-width: 1200) {
+        background-position: center;
+    }
+}
+
+.banner-headset{
+    height: 250px;
+    width: 100%;
+    background-image: url('/src/assets/images/banner/banner-headset-g733.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30% center;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @media (min-width: 1023px) {
+        padding: 16px 48px;
+    }
+    @media (min-width: 1200) {
+        background-position: center;
+    }
+}

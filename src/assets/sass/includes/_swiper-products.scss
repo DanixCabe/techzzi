@@ -1,5 +1,5 @@
 div.swiper-products{
-    margin-top: 48px;
+    margin-top: 24px;
     overflow-clip-margin: 26px;
 
     &__swiper-slide-products{
@@ -34,7 +34,6 @@ div.swiper-products{
     &__slider-items{
         width: auto;
         height: auto;
-        border: 1px solid;
         max-width: 200px;
         @media (min-width: 360px) {
             max-width: 244px;

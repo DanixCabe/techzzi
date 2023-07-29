@@ -3,6 +3,7 @@ export default {
     content: [
         "./index.html",
         "./src/**/*.{js,ts,jsx,tsx}",
+        "./node_modules/flowbite/**/*.js"
     ],
     darkMode: 'class',
     theme: {
@@ -19,5 +20,7 @@ export default {
             'xxs': {'min': '1px'},
           }
     },
-    plugins: [],
+    plugins: [
+        require('flowbite/plugin')
+    ],
 }

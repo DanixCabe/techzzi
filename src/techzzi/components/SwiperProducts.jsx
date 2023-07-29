@@ -1,15 +1,29 @@
 // Import Swiper React components
+import { useDispatch, useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
-import {EffectCoverflow, Pagination, Navigation  } from 'swiper/modules'
+import {EffectCoverflow, Pagination, Navigation  } from 'swiper/modules';
+import { BsFillCartPlusFill } from "react-icons/bs";
+import {  startAddProduct } from '../../store/techzzi';
 
-export const SwiperProducts = () => {
+
+
+export const SwiperProducts = ({products, title, filterProducts, addProductsInCart } ) => {
+    const dispatch = useDispatch();
+
+    const onAddCart = (product) => {
+        dispatch(startAddProduct(product));
+        addProductsInCart(product)
+    }
+
     return (
-        <Swiper
+        <section className='mx-4'>
+            <h4 className='font-semibold text-3xl md:text-4xl text-slate-800 dark:text-white'>{title}</h4>
+            <Swiper
                 grabCursor={true}
                 loop={false}
                 spaceBetween={32}
@@ -44,119 +58,35 @@ export const SwiperProducts = () => {
                 modules={[EffectCoverflow, Navigation, Pagination]}
                 className='swiper-products mx-8'
             >
-
-            <SwiperSlide className="swiper-products__swiper-slide-products">
-                <a href='' className='d-flex justify-center items-center'>
-                    <div className='swiper-products__slider-items  rounded-lg border-gray-400 dark:border-slate-200 shadow-sm hover:border-cyan-600 dark:hover:border-cyan-600'>
-                        <div id='card-head' className='p-5 border-b-[1px] rounded-t-lg dark:border-slate-200 bg-slate-200'>
-                            <img src='/src/assets/images/carousel_products/img-switch-zelda.png' className='card-img-top' alt='...'/>
-                        </div>
-                        <div id='card-body' className='bg-white border-b-[0px] border-gray-400  dark:border-slate-200 text-slate-800 dark:text-white dark:bg-slate-900 rounded-b-lg p-5'>
-                            <p className='font-semibold'>Name</p>
-                            <p>dcto</p>
-                            <p className='font-semibold text-3xl text-cyan-400'>$300.00</p>
-                        </div>
-                    </div>
-                </a>
-            </SwiperSlide>
-
-            
-            <SwiperSlide className="swiper-products__swiper-slide-products">
-                <a href='' className='d-flex justify-center items-center'>
-                    <div className='swiper-products__slider-items  rounded-lg border-gray-400 dark:border-slate-200 shadow-sm hover:border-cyan-600 dark:hover:border-cyan-600'>
-                        <div id='card-head' className='p-5 border-b-[1px] rounded-t-lg dark:border-slate-200 bg-slate-200'>
-                            <img src='/src/assets/images/carousel_products/img-switch-zelda.png' className='card-img-top' alt='...'/>
-                        </div>
-                        <div id='card-body' className='bg-white border-b-[0px] border-gray-400  dark:border-slate-200 text-slate-800 dark:text-white dark:bg-slate-900 rounded-b-lg p-5'>
-                            <p className='font-semibold'>Name</p>
-                            <p>dcto</p>
-                            <p className='font-semibold text-3xl text-cyan-400'>$300.00</p>
-                        </div>
-                    </div>
-                </a>
-            </SwiperSlide>   
-
-            
-            <SwiperSlide className="swiper-products__swiper-slide-products">
-                <a href='' className='d-flex justify-center items-center'>
-                    <div className='swiper-products__slider-items  rounded-lg border-gray-400 dark:border-slate-200 shadow-sm hover:border-cyan-600 dark:hover:border-cyan-600'>
-                        <div id='card-head' className='p-5 border-b-[1px] rounded-t-lg dark:border-slate-200 bg-slate-200'>
-                            <img src='/src/assets/images/carousel_products/img-switch-zelda.png' className='card-img-top' alt='...'/>
-                        </div>
-                        <div id='card-body' className='bg-white border-b-[0px] border-gray-400  dark:border-slate-200 text-slate-800 dark:text-white dark:bg-slate-900 rounded-b-lg p-5'>
-                            <p className='font-semibold'>Name</p>
-                            <p>dcto</p>
-                            <p className='font-semibold text-3xl text-cyan-400'>$300.00</p>
-                        </div>
-                    </div>
-                </a>
-            </SwiperSlide>   
-
-            
-            <SwiperSlide className="swiper-products__swiper-slide-products">
-                <a href='' className='d-flex justify-center items-center'>
-                    <div className='swiper-products__slider-items  rounded-lg border-gray-400 dark:border-slate-200 shadow-sm hover:border-cyan-600 dark:hover:border-cyan-600'>
-                        <div id='card-head' className='p-5 border-b-[1px] rounded-t-lg dark:border-slate-200 bg-slate-200'>
-                            <img src='/src/assets/images/carousel_products/img-switch-zelda.png' className='card-img-top' alt='...'/>
-                        </div>
-                        <div id='card-body' className='bg-white border-b-[0px] border-gray-400  dark:border-slate-200 text-slate-800 dark:text-white dark:bg-slate-900 rounded-b-lg p-5'>
-                            <p className='font-semibold'>Name</p>
-                            <p>dcto</p>
-                            <p className='font-semibold text-3xl text-cyan-400'>$300.00</p>
-                        </div>
-                    </div>
-                </a>
-            </SwiperSlide>   
-
-            
-            <SwiperSlide className="swiper-products__swiper-slide-products">
-                <a href='' className='d-flex justify-center items-center'>
-                    <div className='swiper-products__slider-items  rounded-lg border-gray-400 dark:border-slate-200 shadow-sm hover:border-cyan-600 dark:hover:border-cyan-600'>
-                        <div id='card-head' className='p-5 border-b-[1px] rounded-t-lg dark:border-slate-200 bg-slate-200'>
-                            <img src='/src/assets/images/carousel_products/img-switch-zelda.png' className='card-img-top' alt='...'/>
-                        </div>
-                        <div id='card-body' className='bg-white border-b-[0px] border-gray-400  dark:border-slate-200 text-slate-800 dark:text-white dark:bg-slate-900 rounded-b-lg p-5'>
-                            <p className='font-semibold'>Name</p>
-                            <p>dcto</p>
-                            <p className='font-semibold text-3xl text-cyan-400'>$300.00</p>
-                        </div>
-                    </div>
-                </a>
-            </SwiperSlide>
-
-
-            
-            <SwiperSlide className="swiper-products__swiper-slide-products">
-                <a href='' className='d-flex justify-center items-center'>
-                    <div className='swiper-products__slider-items  rounded-lg border-gray-400 dark:border-slate-200 shadow-sm hover:border-cyan-600 dark:hover:border-cyan-600'>
-                        <div id='card-head' className='p-5 border-b-[1px] rounded-t-lg dark:border-slate-200 bg-slate-200'>
-                            <img src='/src/assets/images/carousel_products/img-switch-zelda.png' className='card-img-top' alt='...'/>
-                        </div>
-                        <div id='card-body' className='bg-white border-b-[0px] border-gray-400  dark:border-slate-200 text-slate-800 dark:text-white dark:bg-slate-900 rounded-b-lg p-5'>
-                            <p className='font-semibold'>Name</p>
-                            <p>dcto</p>
-                            <p className='font-semibold text-3xl text-cyan-400'>$300.00</p>
-                        </div>
-                    </div>
-                </a>
-            </SwiperSlide>      
-
-
-            
-                {/* {
-                    imagesSwiperSlide.map((image) => { 
-                        return (
-                            <SwiperSlide className='' key={image}>
-                                <img src={image} alt={image} className='rounded-md' />
+      
+                {
+                    products.map((product) => product.type === filterProducts &&     
+                        (
+                            <SwiperSlide key={product.id} className="swiper-products__swiper-slide-products">
+                                <div className='swiper-products__slider-items  rounded-lg border-[1px] border-gray-300 shadow-sm '>
+                                    <div id='card-head' className='p-5 border-b-[1px] rounded-t-lg dark:border-slate-200 bg-slate-200'>
+                                        <img src={`/src/assets/images/${product.type}/${product.image}`} className='card-img-top' alt={product.name}/>
+                                    </div>
+                                    <div id='card-body' className='bg-white border-b-[0px] border-gray-300  dark:border-slate-200 text-slate-800 dark:text-white dark:bg-slate-900 rounded-b-lg p-5'>
+                                        <p className='text-xs font-semibold opacity-70'>{product.brand}</p>
+                                        <p className='text-base font-semibold'>{product.name}</p>
+                                        <p className='font-semibold text-3xl text-cyan-400'>${product.price.toFixed(2)}</p>
+                                        <button onClick={() => onAddCart(product)} className='flex items-center justify-center text-lg font-bold border-[1px] rounded-sm mt-2 w-36 border-cyan-500 bg-cyan-500 text-white hover:bg-cyan-600 hover:border-cyan-600'>
+                                            Add Cart
+                                            <BsFillCartPlusFill className='ml-3'/>
+                                        </button>
+                                    </div>
+                                </div>
                             </SwiperSlide>
                         )
-                    })
-                } */}
+                    )
+                }
                 <div className='slider-controler h-auto'>
                     <div className='swiper-button-next'></div>   
                     <div className='swiper-button-prev'></div>   
                     <div className='swiper-pagination'></div>
                 </div>
-        </Swiper>
+            </Swiper>
+        </section>
     )
 }

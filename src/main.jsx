@@ -5,6 +5,7 @@ import './index.css'
 import { TechzziApp } from './TechzziApp.jsx'
 import { Provider } from 'react-redux'
 import {store} from './store'
+import 'flowbite';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>

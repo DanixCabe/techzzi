@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import { Navbar } from "../../ui/components";
+import { Footer, Navbar, Offcanvas } from "../../ui/components";
 import { useCheckAuth } from "../../auth/hooks"
 
 
@@ -8,8 +8,11 @@ export const TechzziRoutes = () => {
     return (
         <>
             <Navbar />
-            <Outlet />
-
+            <Offcanvas/>
+            <section className="mt-20">
+                <Outlet />
+            </section>
+            <Footer/>
 
         </>
     )
