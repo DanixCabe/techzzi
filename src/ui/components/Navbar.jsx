@@ -9,7 +9,7 @@ import { BsFillSunFill, BsFillMoonStarsFill, BsCart } from "react-icons/bs";
 import { Profile } from './Profile';
 
 
-const theme = localStorage.getItem('theme');
+const theme = (!!localStorage.getItem('theme')) ? localStorage.getItem('theme') : 'light';
 
 
 export const Navbar = () => {
