@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 export const HomePage = () => {
     const dispatch = useDispatch();
-    const {unitCart, productsInCart} = useSelector(state => state.techzzi)
+    const {unitCart, productsInCart, isSaving} = useSelector(state => state.techzzi)
     const {productsCart ,setProductCart, setStartProducts, addProductsInCart} = useBuyCart([])
     
     useEffect(() => {

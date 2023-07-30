@@ -23,6 +23,7 @@ export const Navbar = () => {
     const {openModal, setOpenModal, toggleModal} = useModalOpen();
     const { darkMode, toggleDarkLightMode } = useDarkMode(theme);
  
+    const sumUnitsCart = productsInCart.reduce((sum, product) => sum + product.unit,0)
 
     useEffect(() => {
         toggleDarkLightMode(theme)
@@ -115,7 +116,7 @@ export const Navbar = () => {
                             <div  className='text-cyan-500 rounded-md cursor-pointer xxs:px-2 xs:px-3 py-2 hover:bg-gray-200 dark:hover:bg-slate-800 relative' type="button" data-drawer-target="offcanvasCart" data-drawer-show="offcanvasCart" aria-controls="offcanvasCart">
                                 <BsCart/>
                                 {
-                                    (unitCart) && (<span className={`cant-unit-cart bg-orange-500 font-bold w-auto p-[2px] h-auto rounded-full text-white`}>{unitCart}</span>)
+                                    (productsInCart.length !== 0) && (<span className={`cant-unit-cart bg-orange-500 font-semibold min-w-[16px] w-auto p-[2px] h-auto rounded-full text-white text`}>{sumUnitsCart}</span>)
                                 }  
                             </div>
                             <div className={`hidden relative md:flex items-center mx-2  text-lg rounded-3xl ring-2 ${(darkMode === 'dark') ? `bg-gray-700 text-white ring-gray-700 `:`bg-cyan-500 ring-cyan-500  text-white`}`} >

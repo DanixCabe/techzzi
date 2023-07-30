@@ -9,21 +9,45 @@ import { createSlice } from '@reduxjs/toolkit';
         },
         reducers: {
             incrementUnitCart: (state, action) => {
-                state.productsInCart.push(action.payload.products);
+                state.productsInCart.push(action.payload.productCurrent);
                 state.unitCart += 1;
                 state.isSaving = false;
                 localStorage.setItem('cart', JSON.stringify(state.productsInCart));
                 localStorage.setItem('unitCart', state.unitCart);
-                
 
             },
-            decrementUnitCart: (state) => {
-                state.unitCart -= 1;
+            updateDecrementUnitCart: (state, action) => {
+                state.productsInCart.map(product => {
+                    if (product['id'] === action.payload){
+                        product['unit'] = product['unit']-1;
+                        state.unitCart -= 1;
+                    }
+                });
+                state.isSaving = false;
+                localStorage.setItem('cart', JSON.stringify(state.productsInCart));
+                localStorage.setItem('unitCart', state.unitCart);
+            },
+            updateAddUnitCart: (state, action) => {
+                state.productsInCart.map(product => {
+                    if (product['id'] === action.payload){
+                        product['unit'] = product['unit']+1;
+                        state.unitCart += 1;
+                    }
+                });
+                state.isSaving = false;
+                localStorage.setItem('cart', JSON.stringify(state.productsInCart));
+                localStorage.setItem('unitCart', state.unitCart);
+            },
+            deleteProductCart: (state, action) => {
+                state.productsInCart = state.productsInCart.filter(product => product.id !== action.payload)
+                state.isSaving = false;
+                localStorage.setItem('cart', JSON.stringify(state.productsInCart));
+                localStorage.setItem('unitCart', state.unitCart);
             },
             checkSaving : (state) => {
-                state.isSaving = true
+                state.isSaving = true;
             }
         }
 });
 // Action creators are generated for each case reducer function
-export const { incrementUnitCart, decrementUnitCart, checkSaving } = techzziSlice.actions;
+export const { incrementUnitCart, updateDecrementUnitCart, checkSaving, updateAddUnitCart, deleteProductCart } = techzziSlice.actions;
