@@ -7,7 +7,9 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import {EffectCoverflow, Pagination, Navigation  } from 'swiper/modules'
 
-const imagesSwiperSlide = ['/src/assets/images/carousel/home-4090rtx.jpg','/src/assets/images/carousel/home-asusrog.jpg','/src/assets/images/carousel/home-ps5.jpg']
+const urlImages = 'https://res.cloudinary.com/dk5aoscls/image/upload/v1690691489'
+
+const imagesSwiperSlide = [`${urlImages}/images/carousel/home-4090rtx.jpg`,`${urlImages}/images/carousel/home-asusrog.jpg`,`${urlImages}/images/carousel/home-ps5.jpg`]
 
 export const SwiperHome = () => {
     return (

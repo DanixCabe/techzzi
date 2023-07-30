@@ -50,7 +50,7 @@ export const Modal = ({toggleSettings, onGoogleSingIn}) => {
                         </div>
                         <div className="flex justify-center mt-4">
                             <button className={(isAuthenticated) ? `opacity-40` : ``} disabled={isAuthenticated} onClick={onGoogleSingIn}>
-                                <img src="/src/assets/images/google-logo.png" className="w-auto h-8"/>
+                                <img src="https://res.cloudinary.com/dk5aoscls/image/upload/v1690691489/images/google-logo.png" className="w-auto h-8"/>
                             </button>
                         </div>
                     </div>

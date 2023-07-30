@@ -119,9 +119,9 @@ export const Navbar = () => {
                                     (productsInCart.length !== 0) && (<span className={`cant-unit-cart bg-orange-500 font-semibold min-w-[16px] w-auto p-[2px] h-auto rounded-full text-white text`}>{sumUnitsCart}</span>)
                                 }  
                             </div>
-                            <div className={`hidden relative md:flex items-center mx-2  text-lg rounded-3xl ring-2 ${(darkMode === 'dark') ? `bg-gray-700 text-white ring-gray-700 `:`bg-cyan-500 ring-cyan-500  text-white`}`} >
+                            <div className={`relative flex items-center mx-1  text-lg rounded-3xl ring-2 ${(darkMode === 'dark') ? `bg-gray-700 text-white ring-gray-700 `:`bg-cyan-500 ring-cyan-500  text-white`}`} >
                                 <div 
-                                    className={`rounded-full z-50 mr-3 px-2 py-2 cursor-pointer ${(darkMode === 'light') ? `text-cyan-500 `:``}`} 
+                                    className={`rounded-full z-50 xs:mr-3 px-2 py-2 cursor-pointer ${(darkMode === 'light') ? `text-cyan-500 `:``}`} 
                                     onClick={() => onDarkMode('light')}>
                                     <BsFillSunFill/>
                                 </div>
@@ -130,7 +130,7 @@ export const Navbar = () => {
                                     onClick={() => onDarkMode('dark')}>
                                     <BsFillMoonStarsFill/>
                                 </div>
-                                <span id='' className={`rounded-full absolute z-20 after:content-['']  w-8 h-8 text-white bg-white transition-all duration-700 ${(darkMode === 'light') ? `left-0 `:`left-[60%]`}`}></span>
+                                <span id='' className={`rounded-full absolute z-20 after:content-['']  w-8 h-8 text-white bg-white transition-all duration-700 ${(darkMode === 'light') ? `left-0 `:`left-[50%] xs:left-[60%]`}`}></span>
                             </div>
                         </div>
                         

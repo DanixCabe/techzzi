@@ -5,6 +5,8 @@ import { AiFillDelete } from 'react-icons/ai'
 
 export const ListProductsCart = () => {
 
+    const urlImages = 'https://res.cloudinary.com/dk5aoscls/image/upload/v1690691489'
+
     const dispatch = useDispatch();
 
     const {unitCart, productsInCart, isSaving} = useSelector(state => state.techzzi);
@@ -36,7 +38,7 @@ export const ListProductsCart = () => {
                 productsInCart.map((product) => {
                     return (
                         <div key={product.id} className="flex items-center border-b border-gray-300 dark:border-slate-50/[0.16] pt-2 pb-1">
-                            <img src={`/src/assets/images/${product.type}/${product.image}`} className='w-20 h-20 ' alt={product.name}/>
+                            <img src={`${urlImages}/images/${product.type}/${product.image}`} className='w-20 h-20 ' alt={product.name}/>
                             <div className="ml-3">
                                 <p className="text-slate-800 dark:text-white font-bold text-xs">{product.name}</p>
                                 <p className="text-cyan-400 font-bold text-xs mt-1 mb-2">${product.price.toFixed(2)}</p>

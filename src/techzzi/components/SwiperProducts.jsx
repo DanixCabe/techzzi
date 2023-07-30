@@ -15,6 +15,8 @@ import {  startAddProduct } from '../../store/techzzi';
 export const SwiperProducts = ({products, title, filterProducts, addProductsInCart } ) => {
     const dispatch = useDispatch();
 
+    const urlImages = 'https://res.cloudinary.com/dk5aoscls/image/upload/v1690691489'
+
     const onAddCart = (product) => {
         dispatch(startAddProduct(product));
         addProductsInCart(product)
@@ -58,14 +60,14 @@ export const SwiperProducts = ({products, title, filterProducts, addProductsInCa
                 modules={[EffectCoverflow, Navigation, Pagination]}
                 className='swiper-products mx-8'
             >
-      
+
                 {
                     products.map((product) => product.type === filterProducts &&     
                         (
                             <SwiperSlide key={product.id} className="swiper-products__swiper-slide-products">
                                 <div className='swiper-products__slider-items  rounded-lg border-[1px] border-gray-300 shadow-sm '>
                                     <div id='card-head' className='p-5 border-b-[1px] rounded-t-lg dark:border-slate-200 bg-slate-200'>
-                                        <img src={`/src/assets/images/${product.type}/${product.image}`} className='card-img-top' alt={product.name}/>
+                                        <img src={`${urlImages}/images/${product.type}/${product.image}`} className='card-img-top' alt={product.name}/>
                                     </div>
                                     <div id='card-body' className='bg-white border-b-[0px] border-gray-300  dark:border-slate-200 text-slate-800 dark:text-white dark:bg-slate-900 rounded-b-lg p-5'>
                                         <p className='text-xs font-semibold opacity-70'>{product.brand}</p>

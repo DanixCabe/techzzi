@@ -14,8 +14,8 @@ div.swiper-products{
             display: flex;
             width: 42px;
             left: -20px;
-            content: url('/src/assets/images/arrow-carousel.png');
-            content: url('/src/assets/images/arrow-carousel.svg');
+            content: url('https://res.cloudinary.com/dk5aoscls/image/upload/v1690691489/images/arrow-carousel.png');
+            content: url('https://res.cloudinary.com/dk5aoscls/image/upload/v1690691489/images/arrow-carousel.svg');
         }
     }
 
@@ -25,8 +25,8 @@ div.swiper-products{
             display: flex;
             width: 42px;
             right: -20px;
-            content: url('/src/assets/images/arrow-carousel.png');
-            content: url('/src/assets/images/arrow-carousel.svg');
+            content: url('https://res.cloudinary.com/dk5aoscls/image/upload/v1690691489/images/arrow-carousel.png');
+            content: url('https://res.cloudinary.com/dk5aoscls/image/upload/v1690691489/images/arrow-carousel.svg');
             transform: rotate(180deg);
         }
     }

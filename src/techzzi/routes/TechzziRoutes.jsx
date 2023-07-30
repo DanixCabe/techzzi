@@ -9,7 +9,7 @@ export const TechzziRoutes = () => {
         <>
             <Navbar />
             <Offcanvas/>
-            <section className="mt-20">
+            <section className="mt-20 mb-10">
                 <Outlet />
             </section>
             <Footer/>
