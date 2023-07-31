@@ -3,7 +3,7 @@
 This project was create with Vite for practice React JS, Redux, darkmode funcionality and create cart shopping.
 
 ## Description
-TECHZZI APP is a e-commerce website was create for practice my skills with React because I want to improve my knowledge. Also, you can create accounts with normale form or using Google mail.
+TECHZZI APP is aa e-commerce website was create for practice my skills with React because I want to improve my knowledge. Also, you can create accounts with normale form or using Google mail.
 
 ## Technologies
 * [React JS](https://react.dev/): Version 18
