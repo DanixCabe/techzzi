@@ -17,11 +17,18 @@ TECHZZI APP is a e-commerce website was create for practice my skills with React
 ## Installation
 After you clone this repository you need to use these commands.
 
-yarn add tailwindcss\
-npx tailwindcss init\
-yarn add @reduxjs/toolkit\
-yarn add react-redux\
-yarn add swiper\
-yarn add flowbite\
-yarn add react-icons\
-yarn add sass\
+yarn add tailwindcss
+
+npx tailwindcss init
+
+yarn add @reduxjs/toolkit
+
+yarn add react-redux
+
+yarn add swiper
+
+yarn add flowbite
+
+yarn add react-icons
+
+yarn add sass
